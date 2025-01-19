@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogMaster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BlogMaster</h1>
+        <p>Your go-to platform for sharing ideas and stories!</p>
+        <div class="container">
+            <nav>
+                <ul id="nav-links" class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#blogs">Popular Blogs</a></li>
+                    <li><a href="#create-blog">Create Blog</a></li>
+                    <li><a href="#notes">Notes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+    
+        </div>
+    </header>
+
+    <main>
+        <!-- Popular Blogs Section -->
+        <section id="popular-blogs">
+            <h2>Popular Blogs</h2>
+            <div class="blog-card">
+                <img src="img1.jpg" alt="Blog 1" class="blog-image">
+                <h3>Blog Title 1</h3>
+                <p>Snippet of the blog content...</p>
+            </div>
+            <div class="blog-card">
+                <img src="img2.jpeg" alt="Blog 2" class="blog-image">
+                <h3>Blog Title 2</h3>
+                <p>Snippet of the blog content...</p>
+            </div>
+            <!-- Dynamic blogs will be appended here -->
+        </section>
+
+        <!-- Create Blog Section -->
+        <section id="create-blog">
+            <h2>Create Your Blog</h2>
+            <form id="blog-form">
+                <label for="blog-title">Blog Title:</label>
+                <input type="text" id="blog-title" placeholder="Enter blog title" required>
+        
+                <label for="blog-content">Blog Content:</label>
+                <textarea id="blog-content" placeholder="Write your blog here..." required></textarea>
+        
+                <label for="blog-image">Blog Image:</label>
+                <input type="file" id="blog-image" accept="image/*">
+                <div id="editor-toolbar">
+                    <button onclick="formatText('bold')">Bold</button>
+                    <button onclick="formatText('italic')">Italic</button>
+                    <button onclick="formatText('underline')">Underline</button>
+                    <button onclick="formatText('insertUnorderedList')">Bullet List</button>
+                </div>
+                <button type="submit">Post Blog</button>
+
+           
+
+            </form>
+        </section>
+
+        <!-- Notes Section -->
+        <section id="notes-section">
+            <h2>Notes</h2>
+            <textarea id="note-input" placeholder="Jot down your ideas here..."></textarea>
+            <button id="save-note-btn">Save Note</button>
+            <div id="notes-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 BlogMaster. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
